@@ -78,6 +78,16 @@ table {
   *zoom: 1;
 }
 
+/*
+  ========================================
+  Primary header
+  ========================================
+*/
+
+.logo {
+  float: left;
+}
+
 .container {
   margin: 0 auto;
   padding-left: 30px;
