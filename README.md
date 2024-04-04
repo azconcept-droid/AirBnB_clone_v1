@@ -22,3 +22,13 @@ Project description
 - [uuid module](https://docs.python.org/3.8/library/uuid.html)
 - [datetime module](https://docs.python.org/3.8/library/datetime.html)
 - [ Flask Mega-Tutorial series](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+
+## Authors
+<details>
+    <summary>Yahaya Azeez</summary>
+    <ul>
+    <li><a href="https://www.github.com/azconcept-droid">Github</a></li>
+    <li><a href="https://twitter.com/yalecttech">Twitter</a></li>
+    <li><a href="mailto:azconcept2016@gmail.com">E-Mail</a></li>
+    </ul>
+</details>
