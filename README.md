@@ -3,7 +3,7 @@
 
 Project description
 ===
-### The console
+### The console (command interpreter)
 <ul>
     <li>create your data model</li>
     <li>manage (create, update, destroy, etc) objects via a console / command interpreter</li>
@@ -15,6 +15,10 @@ Project description
 <p> This abstraction will also allow you to change the type of storage easily without updating all of your codebase.</p>
 
 <p> The console will be a tool to validate this storage engine</p>
+
+#### How to start it
+#### How to use it
+#### examples
 
 **Resources**
 - [Python cmd module](https://docs.python.org/3.8/library/cmd.html)
