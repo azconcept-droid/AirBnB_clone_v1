@@ -10,6 +10,7 @@ class HBNBCommand(cmd.Cmd):
     """Command processor"""
 
     prompt = '(hbnb) '
+    file = None
 
     def do_greet(self, person):
         """Greet [person]
@@ -23,8 +24,9 @@ class HBNBCommand(cmd.Cmd):
         print('\n'.join(['greet [person]', 'Greet the named person']))
 
     def do_quit(self, line):
-        """Quit command exit the program\n"""
-        print("hello\n")
+        """Quit command to exit the program\n"""
+        quit()
+        return True
 
     def emptyline(self):
         """Return bool if line is empty or not"""
@@ -34,10 +36,9 @@ class HBNBCommand(cmd.Cmd):
     def do_EOF(self, line):
         """End of file function"""
         return True
-    
-    def preloop(self):
-        """ Return none """
-        print("Welcome")
+
+    def postloop(self):
+        print('')
 
 if __name__=="__main__":
     HBNBCommand().cmdloop()
