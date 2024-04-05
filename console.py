@@ -12,17 +12,6 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
     file = None
 
-    def do_greet(self, person):
-        """Greet [person]
-        Greet the named person"""
-        if person:
-            print('hi, ' + person)
-        else:
-            print('hi')
-    
-    def help_greet(self):
-        print('\n'.join(['greet [person]', 'Greet the named person']))
-
     def do_quit(self, line):
         """Quit command to exit the program\n"""
         quit()
@@ -38,6 +27,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def postloop(self):
+        """Fare well message"""
         print('')
 
 if __name__=="__main__":
