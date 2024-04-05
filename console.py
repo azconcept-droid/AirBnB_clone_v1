@@ -12,8 +12,43 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
     file = None
 
+    def do_create(self, arg):
+        """Create command to create new instance of BaseModel"""
+        if arg:
+            print('')
+        else:
+            print('** class name missing **')
+
+    def do_show(self, kargs):
+        """Show command to print the string representation of an instance based on the class name and id"""
+        if kargs:
+            print('')
+        else:
+            print('** class name missing **')
+    
+    def do_destroy(self, kargs):
+        """Destroy command to delete an instance based on the class name and id"""
+        if kargs:
+            print('')
+        else:
+            print('** class name missing **')
+
+    def do_all(self, kargs):
+        """All command to print all string representation of all instances based or not on the class name"""
+        if kargs:
+            print('')
+        else:
+            print('all class name')
+
+    def do_update(self, kargs):
+        """Update command to update an instance based on the class name and id by adding or updating attribute"""
+        if kargs:
+            print('')
+        else:
+            print('** class name missing **')
+
     def do_quit(self, line):
-        """Quit command to exit the program\n"""
+        """Quit command to exit the program"""
         quit()
         return True
 
