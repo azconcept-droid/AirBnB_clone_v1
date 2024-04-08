@@ -20,11 +20,10 @@ class BaseModel():
         """returns a dict containing all keys/values of __dict__ of the instance"""
         instance = self.__dict__.copy()
         instance['__class__'] = self.__class__.__name__
-        instance['created_at'] = str(instance['created_at'])
-        instance['updated_at'] = str(instance['updated_at'])
+        instance['created_at'] = datetime.isoformat(instance['created_at'])
+        instance['updated_at'] = datetime.isoformat(instance['updated_at'])
 
         return instance
-
         
     def __str__(self):
         """print object to stdout"""
