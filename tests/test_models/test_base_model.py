@@ -78,12 +78,12 @@ class TestBaseModel(unittest.TestCase):
         m1.age = 89
         m1_json = m1.to_dict()
 
-        # m2 = BaseModel(**m1_json)
-        # self.assertEqual(m1.name, m2.name)
-        # self.assertEqual(m1.age, m2.age)
-        # `m1` and `m2` have the same attributes
-        # self.assertDictEqual(m1_json, m2.to_dict())
-        # self.assertEqual(str(m1), str(m2))
+        m2 = BaseModel(**m1_json)
+        self.assertEqual(m1.name, m2.name)
+        self.assertEqual(m1.age, m2.age)
+        #  `m1` and `m2` have the same attributes
+        self.assertDictEqual(m1_json, m2.to_dict())
+        self.assertEqual(str(m1), str(m2))
 
     def test_to_str(self):
         """ Test that the str method has the correct output """
