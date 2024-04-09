@@ -8,9 +8,13 @@ class BaseModel():
     """This is base model class"""
 
     def __init__(self, *args, **kwargs):
-        if kwargs is not None:
-            for key, value in kwargs.iteritems():
-                print(key, value)
+        if kwargs:
+            for key, value in kwargs.items():
+                if key is not "__class__":
+                    if key in ["created_at", "updated_at"]:
+                        setattr(self, key, datetime.fromisoformat(value))
+                    else:
+                        setattr(self, key, value)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
