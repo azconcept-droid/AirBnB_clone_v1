@@ -38,5 +38,5 @@ class BaseModel():
         
     def __str__(self):
         """print object to stdout"""
-        cls = self.__class__.__name__
-        return "[{}] ({}) {}".format(cls, self.id, self.__dict__)
+        cls_name = self.__class__.__name__
+        return "[{}] ({}) {}".format(cls_name, self.id, self.__dict__)
