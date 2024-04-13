@@ -117,9 +117,7 @@ class HBNBCommand(cmd.Cmd):
                                 else:
                                     # Extract attribute value
                                     att_value = args.split(' ')[3]
-                                    dict = [[att_name, att_value]]
-                                    for [name, value] in dict:
-                                        setattr(storage.all()[key], name, value)
+                                    setattr(storage.all()[key], att_name, att_value)
                                     storage.save()
                         else:
                             print("** no instance found **")
